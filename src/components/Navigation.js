@@ -3,20 +3,20 @@ import './Navigation.css';
 
 function Navigation() {
 
-  const infinityScroll = () => {
-    alert('asdf');
-  }
+  // const infinityScroll = () => {
+  //   alert('asdf');
+  // }
 
-  const pagination = () => {
-    alert('fdsa');
-  }
+  // const pagination = () => {
+  //   alert('fdsa');
+  // }
 
   return (
     <div className="nav">
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
-      <p onClick={infinityScroll}>infinityScroll</p>
-      <p onClick={pagination}>pagination</p>
+      {/* <Link onClick={infinityScroll}>scroll</Link>
+      <Link onClick={pagination}>paging</Link> */}
     </div>
   );
 }

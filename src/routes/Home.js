@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie';
-import Loading from './Loading';
+import Loading from '../components/Loading';
 import './Home.css';
 
 function Home () {
