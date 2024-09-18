@@ -13,7 +13,17 @@
   font-weight: 300;
 }
 
+.searchBar {
+  width: 50%;
+  position: fixed;
+  margin-left: 25%;
+  z-index: 999;
+}
+
 .movies {
+  position: absolute;
+  top: 25px;
+
   display: grid;
   grid-template-columns: repeat(2, minmax(400px, 1fr));
   grid-gap: 100px;

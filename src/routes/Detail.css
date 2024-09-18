@@ -1,12 +1,17 @@
-.container {
+.detail_container {
   margin: 50px;
   padding: 50px;
   height: 100%;
+  & img {
+    max-width: 230px;
+    max-height: 400px;
+  }
   display: flex;
   justify-content: center;
 }
 
-.movie {
+.detail_movie {
+  width: 800px;
   background-color: white;
   margin: 70px;
   font-weight: 300;
@@ -18,7 +23,7 @@
               0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }
 
-.movie a {
+.detail_movie a {
   display: grid;
   grid-template-columns: minmax(150px, 1fr) 2fr;
   grid-gap: 20px;
@@ -26,10 +31,17 @@
   color: inherit;
 }
 
-.movie img {
+.detail_movie__relatedMovies img {
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    background-size: cover;
+    transition: all 0.2s linear;
+  }
   position: relative;
-  top: -50px;
+  top: 0px;
   max-width: 150px;
+  max-height: 400px;
   width: 100%;
   margin-right: 30px;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
@@ -37,19 +49,19 @@
               0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
 
-.movie .movie__title,
-.movie .movie__year {
+.detail_movie .detail_movie__title,
+.detail_movie .detail_movie__year {
   margin: 0;
   font-weight: 300;
 }
 
-.movie .movie__title {
+.detail_movie .detail_movie__title {
   margin-bottom: 5px;
   font-size: 24px;
   color: #2c2c2c;
 }
 
-.movie .movie__genres {
+.detail_movie .detail_movie__genres {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -58,8 +70,40 @@
   margin: 5px 0px;
 }
 
-.movie__genres li,
-.movie .movie__year {
+.detail_movie__genres li,
+.detail_movie .detail_movie__year {
   margin-right: 10px;
   font-size: 14px;
+}
+
+.detail_movie__summary {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.detail_movie__relatedMovies {
+  background-color: white;
+  margin: 10%;
+  font-weight: 300;
+  padding: 20px;
+  border-radius: 5px;
+  color: #adaeb9;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+              0 8px 16px -8px rgba(0, 0, 0, 0.3),
+              0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.detail_replies {
+  & li {
+    list-style: none;
+  }
+  background-color: white;
+  margin: 10%;
+  font-weight: 500;
+  padding: 20px;
+  border-radius: 5px;
+  color: black;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+              0 8px 16px -8px rgba(0, 0, 0, 0.3),
+              0 -6px 16px -6px rgba(0, 0, 0, 0.025);
 }

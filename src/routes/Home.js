@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Movie from '../components/Movie';
 import Loading from '../components/Loading';
+import Search from '../components/Search';
 import './Home.css';
 
 function Home () {
@@ -57,31 +58,36 @@ function Home () {
   }, []);
 
   return (
-    <section className="container">
-      {/* {isLoading ? (
-        <div className="loader">
+    <>
+      <Search />
+      <section className="container">
+        {/* {isLoading ? (
+          <div className="loader">
           <span className="loader__text">Loading...</span>
-        </div>
-      ) : ( */}
-        <div className="movies">
-          {movieList.map((movie, index) => (
-            <Movie
-              key={index}
-              id={movie.id}
-              year={movie.year}
-              title={movie.title}
-              summary={movie.summary}
-              poster={movie.medium_cover_image}
-              genres={movie.genres}
-            />
-          ))}
-          {isLoading ? (
-            <Loading />
-          ) : ''}
-          <div id="observer"></div>
-        </div>
-      {/* )} */}
-    </section>
+          </div>
+        ) : ( */}
+          <div className="movies">
+            {movieList.map((movie, index) => (
+              <Movie
+                key={index}
+                id={movie.id}
+                year={movie.year}
+                title={movie.title}
+                summary={movie.summary}
+                rating={movie.rating}
+                runtime={movie.runtime}
+                poster={movie.medium_cover_image}
+                genres={movie.genres}
+              />
+            ))}
+            {isLoading ? (
+              <Loading />
+            ) : ''}
+            <div id="observer"></div>
+          </div>
+        {/* )} */}
+      </section>
+    </>
   );
 }
 
